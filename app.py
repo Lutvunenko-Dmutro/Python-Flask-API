@@ -22,6 +22,9 @@ class Item(Resource):
 
 # Ресурс для роботи зі списком елементів
 class ItemList(Resource):
+    def get(self):
+        return items, 200  # Додаємо цей метод
+
     def post(self):
         data = request.get_json()
         new_item = {
